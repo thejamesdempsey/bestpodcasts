@@ -291,15 +291,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/_sass\/ui\/type.scss": {
+	"\/_sass\/ui\/_type.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_sass\/ui\/type.scss",
-		"outputAbbreviatedPath": "\/_sass\/css\/type.css",
+		"inputAbbreviatedPath": "\/_sass\/ui\/_type.scss",
+		"outputAbbreviatedPath": "\/_sass\/css\/_type.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
