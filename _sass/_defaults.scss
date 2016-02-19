@@ -1,0 +1,290 @@
+/*------------------------------------*\
+    $DEFAULTS
+\*------------------------------------*/
+
+//@import "generic/functions";
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base stuff
+ */
+$base-font-size:          18px;
+$base-line-height:        1.6!default;
+$browser-context:         16 !default; // Default
+
+@import "generic/functions.scss";
+
+/**
+ * Base font-family.
+ */
+$base-font-family:        "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+
+/**
+ * Default colour for objects’ borders etc.
+ */
+$base-bg-color:			  #f8f8f8 !default;
+$base-offset-color:		  #ffffff !default;
+$base-ui-color:           #ccc!default;
+$base-accent-color:       #1982CC!default;
+
+
+$base-font-color:         #444444!default;
+$base-link-color:		  $base-accent-color !default;
+
+$base-border-radius:      4px;
+
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Basic Font Sizes
+ */
+$font-size-default:       $base-font-size !default;
+
+$font-size-small:         12px!default;
+$font-size-tiny:          10px!default;
+
+
+
+/**
+ * Headings
+ */
+$header-font-family:           $base-font-family !default;
+$header-font-weight:           500 !default;
+$header-font-style:            normal !default;
+$header-font-color:            #222 !default;
+$header-line-height:           1.4 !default;
+$header-text-rendering:        optimizeLegibility !default;
+
+	/* Header sizes */
+	$h1-font-size: 44px !default; // 44px: 4.4rem
+	$h2-font-size: 36px !default; // 36px: 3.6rem
+	$h3-font-size: 26px !default; // 26px: 2.6rem
+	$h4-font-size: 22px !default; // 22px: 2.2rem
+	$h5-font-size: 20px !default; // 20px: 1.0rem
+	$h6-font-size: $base-font-size !default;
+
+
+	/* Subheaders */
+	$subheader-line-height:   1.4 !default;
+	$subheader-font-color:    lighten($header-font-color, 30%) !default;
+	$subheader-font-weight:   300 !default;
+
+/**
+ * Smalls
+ */
+$small-font-size:             80% !default;
+$small-font-color:            lighten($header-font-color, 30%) !default;
+
+/**
+ * Paragraphs
+ */
+$paragraph-font-weight:       normal !default;
+$paragraph-line-height:       1.6;
+$paragraph-aside-line-height: 1.35 !default;
+$paragraph-aside-font-style:  italic !default;
+$paragraph-text-rendering:    optimizeLegibility !default;
+
+
+/**
+ * Blockquotes
+ */
+$blockquote-border: 4px solid rgba(0,0,0,0.1) !default;
+$blockquote-cite-font-size: rem-calc(14px) !default;
+$blockquote-font-style: italic !default;
+$blockquote-font-size: rem-calc(18px) !default;
+
+/**
+ * If you are building a non-responsive site but would still like to use
+ * csswizardry-grids, set this to ‘false’:
+ */
+$responsive:            true!default;
+
+
+/**
+ * Is this build mobile first? Setting to ‘true’ means that all grids will be
+ * 100% width if you do not apply a more specific class to them.
+ */
+$mobile-first:          true!default;
+
+
+/**
+ * Set the spacing between your grid items.
+ */
+$gutter:                $base-line-height!default;
+
+
+/**
+ * Would you like Sass’ silent classes, or regular CSS classes?
+ */
+$use-silent-classes:    false!default;
+
+
+/**
+ * Would you like push and pull classes enabled?
+ */
+$push:                  false!default;
+$pull:                  false!default;
+
+
+/**
+ * Using `inline-block` means that the grid items need their whitespace removing
+ * in order for them to work correctly. Set the following to true if you are
+ * going to achieve this by manually removing/commenting out any whitespace in
+ * your HTML yourself.
+ *
+ * Setting this to false invokes a hack which cannot always be guaranteed,
+ * please see the following for more detail:
+ *
+ * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
+ * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
+ */
+$use-markup-fix:        true!default;
+
+
+/**
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.palm--one-half`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+$breakpoints: (
+    'palm' '(max-width: 480px)',
+    'lap' '(min-width: 481px) and (max-width: 1023px)',
+    'portable' '(max-width: 1023px)',
+    'desk' '(min-width: 1024px)'
+)!default;
+
+
+/**
+ * Define which namespaced breakpoints you would like to generate for each of
+ * widths, push and pull. This is handy if you only need pull on, say, desk, or
+ * you only need a new width breakpoint at mobile sizes. It allows you to only
+ * compile as much CSS as you need. All are turned on by default, but you can
+ * add and remove breakpoints at will.
+ *
+ * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
+ * have been set to ‘true’.
+ */
+$breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk')!default;
+$breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk')!default;
+$breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk')!default;
+
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * Brand stuff: The intention is not to impose style but to add asthetic value
+ */
+$brand-color:              #4a8ec2!default;
+$brand-face:               "Helvetica Neue", sans-serif!default;
+
+/**
+ * How big would you like round corners to be by default?
+ */
+$brand-round:              3px!default;
+
+// Brand Message colors
+// -------------------------
+
+$brand-success:         #5BBD72 !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #D95C5C !default;
+$brand-info:            #5bc0de !default;
+
+
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+$link-text-decoration: none !default;
+$link-font-color: $base-link-color !default;
+$link-font-color-hover: darken($base-link-color, 5%) !default;
+
+// We use these to style the <hr> element
+$hr-border-width: 1px !default;
+$hr-border-style: solid !default;
+$hr-border-color: #ddd !default;
+
+
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             darken($btn-success-bg, 5%) !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                darken($btn-info-bg, 5%) !default;
+
+
+/*------------------------------------*\
+    $Messages
+\*------------------------------------*/
+
+$message-success-color:              #fff !default;
+$message-success-bg:                 $brand-success !default;
+
+$message-warning-color:              #fff !default;
+$message-warning-bg:                 $brand-warning !default;
+
+$message-danger-color:               #fff !default;
+$message-danger-bg:                  $brand-danger !default;
+
+$message-info-color:                 #fff !default;
+$message-info-bg:                    $brand-info !default;
+
+
+/*------------------------------------*\
+    $Panels
+\*------------------------------------*/
+
+$panel-default-border:				 $base-ui-color !default;
+
+$panel-success-border:               $brand-success !default;
+$panel-success-bg:                   $brand-success !default;
+
+$message-warning-color:              #fff !default;
+$message-warning-bg:                 $brand-warning !default;
+
+$message-danger-color:               #fff !default;
+$message-danger-bg:                  $brand-danger !default;
+
+$panel-info-border:                  $brand-info !default;
+$panel-info-bg:                      $brand-info !default;
+
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+$input-border-focus:             #66afe9 !default;
+
+
+
+$use-island:   true;
+$use-panels:   false !default;
+$use-messages: false !default;
+$use-close:    false !default;
+
+
+
+/*------------------------------------*\
+    $FRAMEWORK
+\*------------------------------------*/
+/**
+ * Skeleton will work these next ones out for use within the framework.
+ *
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+$base-spacing-unit:         24px!default;
+$half-spacing-unit:         $base-spacing-unit / 2!default;
+$line-height-ratio:         $base-line-height / $base-font-size;
